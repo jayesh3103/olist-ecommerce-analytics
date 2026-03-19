@@ -97,9 +97,6 @@ E-commerce/
 ### Power BI Dashboard
 ![Power BI Dashboard](outputs/figures/powerbi_dashboard.png)
 
-### Plotly Dash App
-![Plotly Dash Dashboard](outputs/figures/dashboard_walkthrough.webp)
-
 ---
 
 ## 📈 Analysis Screenshots
