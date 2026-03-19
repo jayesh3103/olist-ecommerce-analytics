@@ -42,7 +42,7 @@ Olist's marketplace serves thousands of sellers and hundreds of thousands of cus
 | Champions (7% of customers) generate **13.1% of revenue** | High-value segment worth protecting |
 | At-Risk segment: **22K customers, R$3.7M lifetime value** | Largest recovery opportunity |
 | Late deliveries cause **1.6-point drop** in review scores | 8.1% late rate → direct NPS impact |
-| Churn model (ROC-AUC: 0.63) → **R$12.3M revenue at risk** | Data-driven retention targeting |
+| Churn model (ROC-AUC: 0.71) → **R$12.3M revenue at risk** | Data-driven retention targeting |
 | São Paulo = 41% of orders but **lowest AOV (R$142)** | Upsell opportunity |
 
 ## 📉 Model Performance

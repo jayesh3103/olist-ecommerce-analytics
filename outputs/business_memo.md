@@ -14,7 +14,7 @@ Olist, Brazil's largest marketplace aggregator, processes 100K+ orders across 9 
 
 - São Paulo state accounts for **41% of all orders** and **R$5.8M in revenue** but has the lowest average cart value (R$142), suggesting room for upselling. Bahia has the highest average cart value at R$182.
 
-- **Churn prediction model** (ROC-AUC: 0.63) identified **R$12.3M in total revenue at risk** from 74.8K churned customers. Top churn drivers: days since first order, total spend, and delivery delay.
+- **Churn prediction model** (ROC-AUC: 0.71) identified **R$12.3M in total revenue at risk** from 74.8K churned customers. Top churn drivers: days since first order, total spend, and delivery delay.
 
 ## Recommendations
 

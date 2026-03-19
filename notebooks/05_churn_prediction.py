@@ -5,22 +5,27 @@
 # and revenue-at-risk calculation.
 
 # %%
-import pandas as pd
-import numpy as np
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-import seaborn as sns
 import sqlite3
 import warnings
 from pathlib import Path
 
+import matplotlib
+
+matplotlib.use("Agg")  # Must be before pyplot and seaborn
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import (
-    classification_report, roc_auc_score, roc_curve,
-    confusion_matrix, ConfusionMatrixDisplay
+    ConfusionMatrixDisplay,
+    classification_report,
+    confusion_matrix,
+    roc_auc_score,
+    roc_curve,
 )
+from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
@@ -184,8 +189,8 @@ print(features[feature_cols].describe().round(2))
 
 # %%
 # Encode payment type
-features["payment_credit_card"] = (features["payment_type_mode"] == "credit_card").astype(int)
-features["payment_boleto"] = (features["payment_type_mode"] == "boleto").astype(int)
+features["payment_credit_card"] = np.where(features["payment_type_mode"] == "credit_card", 1, 0)
+features["payment_boleto"] = np.where(features["payment_type_mode"] == "boleto", 1, 0)
 
 # Final feature set (removed entirely leaky features to proactively prevent data leakage!)
 X_cols = [c for c in feature_cols if c not in ["total_orders", "total_spend", "avg_order_value", "days_since_first_order"]] + ["payment_credit_card", "payment_boleto"]
