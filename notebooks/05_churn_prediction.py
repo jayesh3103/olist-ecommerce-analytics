@@ -283,34 +283,7 @@ plt.close()
 print("✓ Saved feature importance chart")
 
 # --- SHAP Values ---
-if False: # Disabled temporarily to prevent numpy 2.0 / cv2 crash
-    import shap
-
-    # Use a sample for SHAP (faster)
-    sample_size = min(500, len(X_test))
-    X_sample = X_test[:sample_size]
-
-    explainer = shap.TreeExplainer(pipe.named_steps["model"])
-    # Scale features as the model expects
-    X_sample_scaled = pipe.named_steps["scaler"].transform(X_sample)
-    shap_values = explainer.shap_values(X_sample_scaled)
-
-    # SHAP summary plot (for churned class)
-    fig, ax = plt.subplots(figsize=(12, 7))
-    shap.summary_plot(
-        shap_values[:, :, 1] if len(shap_values.shape) == 3 else shap_values[1],
-        X_sample,
-        feature_names=X_cols,
-        show=False
-    )
-    plt.title("SHAP Feature Impact on Churn Prediction", fontsize=14, fontweight="bold")
-    plt.tight_layout()
-    plt.savefig(FIG_DIR / "20_shap_summary.png")
-    plt.close()
-    print("✓ Saved SHAP summary plot")
-
-# except Exception as e:
-#     print(f"⚠️  SHAP plot error (non-critical): {e}")
+# (SHAP disabled and removed to prevent numpy 2.0 / cv2 crash)
 
 # %% [markdown]
 # ## 6. Revenue at Risk

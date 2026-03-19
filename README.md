@@ -109,9 +109,8 @@ E-commerce/
 ### Churn Prediction Model — ROC Curve & Confusion Matrix
 ![ROC curve and confusion matrix for the churn prediction Random Forest model](outputs/figures/18_churn_model_evaluation.png)
 
-### Feature Importance & SHAP Explainability
+### Feature Importance
 ![Feature importance chart showing which factors drive customer churn](outputs/figures/19_feature_importance.png)
-![SHAP summary plot for churn model explainability](outputs/figures/20_shap_summary.png)
 
 ### Revenue by Brazilian State (Choropleth Map)
 ![Choropleth map of Brazil showing revenue distribution by state](outputs/figures/16_revenue_choropleth.png)
